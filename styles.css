@@ -1,0 +1,92 @@
+@keyframes bg-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left;}
+}
+
+body {
+    margin: 0;
+    font-family: Nunito, Helvetica;
+    font-style: normal;
+}
+
+
+.nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 100ms background, 300ms background 400ms, 100ms color, 300ms color 400ms;
+}
+
+.nav a:hover {
+    background-color: #e85454;
+    color: black;
+}
+
+.nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.divholder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: first;
+    min-height: 100%;
+}
+.divholder .txtdiv {
+    grid-area: 1 / 1;
+}
+
+.divholder #gradient {
+    grid-area: 1 / 1;
+}
+
+#gradient {
+    width: 100%;
+    min-height: 100%;
+    background-color: #1c1c1c;
+    background-image: linear-gradient(to bottom right, #1c1c1c, #1c1c1c, #363a3a, #00ccb4);
+    background-size: 200%;
+    animation: bg-animation 40s infinite;
+    grid-area: 1 / 1;
+}
+
+.txtdiv {
+    margin: 0 250px;
+    padding: 30px;
+    max-height: 100%;
+    background-color: rgba(15, 164, 194, 0.6);
+    font-family: Nunito, Helvetica;
+    font-style: normal;
+}
+.txtdiv h2 {
+    color: #ffffff;
+}
+
+.title {
+    text-align: center;
+}
+
+.txtdiv h3 {
+    color: #ffffff;
+}
+
+.back_button {
+    float: left;
+    text-decoration: none;
+}
+
+.next_button {
+    float: right;
+    text-decoration: none;
+}
